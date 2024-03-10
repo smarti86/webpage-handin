@@ -1,0 +1,225 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f1f1cc;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styling */
+header {
+  background-color: #B8D4E7;
+  color: #fff;
+  padding: 1%;
+  text-align: center;
+  
+}
+.navClicks{
+  font-weight:500;
+  color: #fff;
+  padding-left: 4%;
+  padding-right: 4%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fdfdfd;
+}
+
+.inner-background-header{
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: #215A88;
+}
+
+/* Referenced YouTube video "How to Add Smooth Scrolling Anchor Links to Jump to a Specific 
+  Part of a Web Page - HTML & CSS" to get the anchor link to scroll smoothly */
+html{
+  scroll-behavior: smooth;
+}
+
+.banner-title{
+  padding-top: 2%;
+  text-align: center;
+  color: #FF592A;
+}
+
+/* Image Styling */
+/* Reference: for the layout, I visited the CSS Layout - Horizontal & Vertical Align website
+ https://www.w3schools.com/css/css_align.asp */
+.banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* @keyframes imageSlides {
+  0%{background-image: url(/Users/sandramartinez/Desktop/cs1300/responsive redesign/front page image elite repeat.jpeg);}
+} */
+
+.banner img {
+  max-width: 100%;
+  max-height: 100vh;
+  display: block;
+  padding: 10;
+  border-radius: 5%;
+  /* border-color: black; */
+  /* border:2px solid #000000; */
+  margin: 0 auto;
+  align-content: center;
+  padding-top: 1%;
+  padding-bottom: 3%;
+}
+
+.social-media{
+  flex-direction: row;
+  color: #FF592A;
+  text-align: center;
+  text-shadow: 2px 2px 5px beige;
+  
+}
+
+
+/* Navigation Bar Styling */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p{
+  font-weight: 200;
+  font-size: 200%;
+}
+.indented-text{
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.content{
+  height:100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  flex-grow: 1;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Reference: To center text, I visited the CSS Layout - Horizontal & Vertical Align website
+ https://www.w3schools.com/css/css_align.asp */
+ /* Also referenced YouTube video 'How to Align Divs Side by Side in HTML & CSS | Align Three Divs | Responsive'
+ to learn how to make the divs side by side */
+.content-divs1, .content-divs2, .content-divs3, .content-divs4{
+  width: 21em;
+  height: 25em;
+  background-color: #b8d4e7;
+  box-shadow: 5px 5px 25px; 
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.content-div-subtitles{
+  margin-left: 0;
+  text-align: center;
+  text-shadow: 2px 2px 5px #f8883d;
+  color:#FF592A;
+}
+
+h2{
+  color:black;
+  margin: 0;
+}
+
+/* referenced the mdn web docs "Using media queries" article to set up my media queries */
+@media (max-width: 429px) {
+  .content {
+    display: flex;
+    height: 100vh;
+    justify-content: space-evenly;
+    gap: 8em;
+    flex-grow: 1;
+    /* padding-top: 80px; */
+    padding: 300px 40px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: center;
+  }
+}
+
+@media (min-width:430px){
+  .content {
+    display: flex;
+    height: 100vh;
+    justify-content: space-evenly;
+    gap: 7em;
+    flex-grow: 1;
+    padding-top: 180px;
+    padding: 270px 40px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: center;
+}
+}
+
+@media (min-width: 768px){
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    gap: 8em;
+    padding-top: 0px;
+    padding: 0px 0px;
+  }
+
+  .content-divs1, .content-divs2, .content-divs3, .content-divs4{
+    max-width: 80%;
+    padding: 60px 60px;
+  }  
+  h2{
+    font-size: 3rem;
+    margin:1.5rem;
+  }
+  /* Outline idea from https://www.codesdope.com/blog/article/adding-outline-to-text-using-css/ */
+  .the-elite-repeat{
+    font-size: 400%;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #215A88;
+  }
+  nav ul {
+    flex-direction: row;
+  }
+  .navClicks{
+    font-size: 150%;
+  }
+}
+
+/* Navigation Bar resizing */
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .text-below{
+    flex-direction: row;
+  }
+  
+}
